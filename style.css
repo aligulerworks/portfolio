@@ -46,8 +46,8 @@
   --trans-back: ease-in 800ms;
 
   /* borders  */
-  --border: 1px solid rgba(var(--back-color), 0.99);
-  --border-hov: 1px solid rgba(var(--color), 0.44);
+  --border: 0.5px solid rgba(var(--back-color), 0.99);
+  --border-hov: 0.5px solid rgba(var(--color), 0.44);
   --panel-back: rgba(var(--shade), 0.55);
   --panel-back-hov: rgba(var(--shade), 0.77);
 }
@@ -56,6 +56,7 @@
   * {
     --font-content: "Ysabeau Office", sans-serif;
     --font-button: "Inconsolata", sans-serif;
+    font-family: var(--font-content);
   }
 }
 
@@ -153,8 +154,8 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 0.9rem;
+  font-weight: 700;
   /* text-transform: uppercase; */
   margin: 0;
 }
@@ -295,6 +296,9 @@ ul {
   text-indent: 0;
   margin: 0;
   padding-left: 1rem;
+  list-style: disc;
+  display: grid;
+  gap: 0.5rem;
 }
 
 li {
@@ -303,8 +307,9 @@ li {
 }
 
 li::marker {
-  font-size: 0.5rem;
-  color: var(--l-darker);
+  font-size: 1rem;
+  color: rgba(var(--color), 0.33);
+  line-height: 0;
 }
 
 /* images  */
@@ -678,11 +683,20 @@ img {
   display: grid;
   gap: 2rem 0.5rem;
   text-align: left;
-  padding: 0 0 0 4rem;
-  grid-template-columns: auto 1fr;
-  align-content: center;
+  /* padding: 0 0 0 4rem; */
+  /* grid-template-columns: auto 1fr; */
+  place-content: center;
   align-items: center;
-  width: max-content;
+  justify-items: start;
+  width: auto;
+}
+
+.contact-info a {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  place-content: center;
+  place-items: center;
 }
 
 /* PAGE - READ */
@@ -697,7 +711,7 @@ img {
 
   justify-items: center;
   justify-content: center;
-  margin: 5rem 0;
+  margin: 9rem 0;
 
   padding: 0px;
 }
@@ -717,7 +731,10 @@ img {
   text-align: left;
 
   background-color: var(--panel-back);
+  /* background: linear-gradient(0deg, var(--panel-back), 0%, transparent, 100%); */
+
   border: var(--border);
+  border-radius: 0.4rem;
 
   /* box-shadow: var(--shadow-box1); */
 
@@ -745,7 +762,19 @@ img {
   box-shadow: inset 0 0.3rem 0.3rem rgba(0, 0, 0, 0.22);
   background-color: rgba(var(--shade), 0.33);
   border-radius: 0.4rem;
+
+  display: grid;
+  justify-content: center;
 }
+
+.read-block ul li ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 0.4rem;
+  list-style: none;
+  padding: 0;
+}
+
 .read-block small,
 .read-block {
   margin: 0;
@@ -910,6 +939,7 @@ footer:before {
 
 .works-card h4 {
   opacity: initial;
+  line-height: normal;
 }
 
 .subcard-single {
