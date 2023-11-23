@@ -181,15 +181,12 @@ button {
 
   margin: 0;
   padding: 0;
-  /* padding: 0.05rem .7rem 0.12rem .7rem; */
-
-  border-radius: 50%;
-  /* border: 0.04rem solid rgba(var(--color), 1); */
   border-radius: 50%;
   box-sizing: border-box;
   filter: drop-shadow(var(--dshadow-button-right))
     drop-shadow(var(--dshadow-button-left));
   background-color: rgba(var(--shade), 0.22);
+  border: 0.5px solid rgba(var(--shade), 1);
   cursor: pointer;
   z-index: 3;
   color: inherit;
@@ -202,6 +199,7 @@ button {
 button a {
   margin: 0;
   padding: 0;
+  font-weight: 800;
 }
 
 button:active {
@@ -215,7 +213,6 @@ button:active {
   transition: opacity var(--trans-btn), border var(--trans-btn),
     background-color var(--trans-btn);
   position: relative;
-  border: var(--border);
 }
 
 .btn-int:hover {
