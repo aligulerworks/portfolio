@@ -56,6 +56,7 @@
   * {
     --font-content: "Ysabeau Office", sans-serif;
     --font-button: "Inconsolata", sans-serif;
+    font-family: var(--font-content);
   }
 }
 
@@ -682,11 +683,20 @@ img {
   display: grid;
   gap: 2rem 0.5rem;
   text-align: left;
-  padding: 0 0 0 4rem;
-  grid-template-columns: auto 1fr;
-  align-content: center;
+  /* padding: 0 0 0 4rem; */
+  /* grid-template-columns: auto 1fr; */
+  place-content: center;
   align-items: center;
-  width: max-content;
+  justify-items: start;
+  width: auto;
+}
+
+.contact-info a {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  place-content: center;
+  place-items: center;
 }
 
 /* PAGE - READ */
