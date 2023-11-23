@@ -19,8 +19,8 @@
 
   --shadow-box-button: 8px 8px 14px var(--dark), -8px 8px 14px var(--dark);
 
-  --dshadow-button-right: 6px 4px 2px var(--dark);
-  --dshadow-button-left: -6px 4px 2px var(--dark);
+  --dshadow-button-right: 3px 3px 1px var(--dark);
+  --dshadow-button-left: -3px 3px 1px var(--dark);
 
   /* COLORS */
 
@@ -33,7 +33,7 @@
   --orange: rgba(255, 153, 70, 1);
   --orange-88: rgba(255, 153, 70, 0.88);
 
-  --dark: rgba(0, 0, 0, 0.03);
+  --dark: rgba(0, 0, 0, 0.06);
   --darker: rgba(0, 0, 0, 0.11);
   --darkest: rgba(0, 0, 0, 0.88);
 
@@ -46,9 +46,9 @@
   --trans-back: ease-in 800ms;
 
   /* borders  */
-  --border: 0.5px solid rgba(var(--back-color), 0.99);
+  --border: 0.5px solid rgba(var(--shade), 0.99);
   --border-hov: 0.5px solid rgba(var(--color), 0.44);
-  --panel-back: rgba(var(--shade), 0.55);
+  --panel-back: rgba(var(--shade), 0.33);
   --panel-back-hov: rgba(var(--shade), 0.77);
 }
 
@@ -219,7 +219,7 @@ button:active {
   transition: opacity var(--trans-btn), border var(--trans-btn),
     background-color var(--trans-btn);
   border: var(--border-hov);
-  background-color: rgba(var(--color), 0.05);
+  background-color: rgba(var(--shade), 0.88);
 }
 
 .btn-ext:focus,
@@ -419,7 +419,7 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 0.33;
+  opacity: 0.55;
   transition: var(--trans-back);
 }
 

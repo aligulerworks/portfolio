@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       const sun = document.querySelector("#sun");
       const lightSwitch = document.querySelector("#light-switch");
       const currentHour = new Date().getHours();
+      console.log(`it's ${currentHour} o'clock`);
 
       // Mode Changer
       let currentMode;
@@ -89,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         const autoMode = () => {
           if ((currentMode = "notSet")) {
-            if (currentHour < 6 || currentHour > 18) {
+            if (currentHour <= 6 || currentHour >= 18) {
               nightMode();
             } else {
               dayMode();
@@ -160,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const photoBy = document.querySelector(".photo-by");
         const showBack = () => {
           wholePageItems.style.setProperty("opacity", "1");
-          mainBackground.style.setProperty("opacity", "0.33");
+          mainBackground.style.setProperty("opacity", "0.55");
           footer.style.setProperty("opacity", "1");
           photoBy.style.setProperty("opacity", "0");
         };
@@ -193,39 +194,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         // ALI BACKGROUNDS
 
-        "1": "20170514-142503.webp",
-        "2": "20170525-185435.webp",
-        "3": "20170528-153955.webp",
-        "4": "20170528-154436.webp",
-        "5": "20180614-200532.webp",
-        "6": "20190804_142539.webp",
-        "7": "20190804_143547.webp",
-        "8": "20190804_182421.webp",
-        "9": "20190806_200842.webp",
-        "10": "20190811_121430.webp",
-        "11": "20191002_193617.webp",
-        "12": "20191013_091504.webp",
-        "13": "20191022_121723.webp",
-        "14": "20191108_113536.webp",
-        "15": "20200205_145218.webp",
-        "16": "20200208_091051.webp",
-        "17": "20200208_091146.webp",
-        "18": "20200208_091357.webp",
-        "19": "20200210_173021.webp",
-        "20": "20200308_104921.webp",
-        "21": "20200308_105621.webp",
-        "22": "20200417_180629.webp",
-        "23": "20200502_170718.webp",
-        "24": "20200503_145137.webp",
-        "25": "20200503_145319.webp",
-        "26": "20200503_150018.webp",
-        "27": "20200503_150030.webp",
-        "28": "20200504_130829.webp",
-        "29": "20200506_182642.webp",
-        "30": "20200506_182703.webp",
-        "31": "20200506_185950.webp",
-        "32": "20201009_174746.webp",
-        "33": "20201222_132115.webp",
+        1: "20170514-142503.webp",
+        2: "20170525-185435.webp",
+        3: "20170528-153955.webp",
+        4: "20170528-154436.webp",
+        5: "20180614-200532.webp",
+        6: "20190804_142539.webp",
+        7: "20190804_143547.webp",
+        8: "20190804_182421.webp",
+        9: "20190806_200842.webp",
+        10: "20190811_121430.webp",
+        11: "20191002_193617.webp",
+        12: "20191013_091504.webp",
+        13: "20191022_121723.webp",
+        14: "20191108_113536.webp",
+        15: "20200205_145218.webp",
+        16: "20200208_091051.webp",
+        17: "20200208_091146.webp",
+        18: "20200208_091357.webp",
+        19: "20200210_173021.webp",
+        20: "20200308_104921.webp",
+        21: "20200308_105621.webp",
+        22: "20200417_180629.webp",
+        23: "20200502_170718.webp",
+        24: "20200503_145137.webp",
+        25: "20200503_145319.webp",
+        26: "20200503_150018.webp",
+        27: "20200503_150030.webp",
+        28: "20200504_130829.webp",
+        29: "20200506_182642.webp",
+        30: "20200506_182703.webp",
+        31: "20200506_185950.webp",
+        32: "20201009_174746.webp",
+        33: "20201222_132115.webp",
       };
 
       backChanger();
