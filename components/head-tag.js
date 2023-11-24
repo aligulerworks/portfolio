@@ -10,7 +10,7 @@ const headTagHome = `
 
 
   <!-- favicon  -->
-  <link rel="icon" type="image/svg+xml" href="/images/favicon-alidelvento.svg" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon-alidelvento.svg" />
 
   <!-- Google Tag Manager -->
   <!-- Google tag (gtag.js) -->
